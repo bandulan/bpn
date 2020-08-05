@@ -55,7 +55,9 @@ $r      = mysqli_fetch_assoc($result);
                                 <td><?= $w['nama']; ?></td>
                                 <td style="text-align: center;">
 
-                                    <a href="<?= base_url('petugas/detail/');  ?><?= $w['id_warga'] ?>" class="btn btn-success btn-sm"><i class="fa fa-user"> </i> &nbsp; Detail</a></td>
+                                    <a href="<?= base_url('petugas/detail/');  ?><?= $w['id_warga'] ?>" class="btn btn-success btn-sm"><i class="fa fa-user"> </i> &nbsp; Detail</a>
+                                    <a href="<?= base_url('petugas/detail/');  ?><?= $w['id_warga'] ?>" class="btn btn-warning btn-sm"><i class="fa fa-pen"> </i> &nbsp; Edit</a>
+                                    <a href="<?= base_url('petugas/detail/');  ?><?= $w['id_warga'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"> </i> &nbsp; Delete</a></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
