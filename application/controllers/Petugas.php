@@ -43,12 +43,7 @@ class Petugas extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function profil()
-    {
-        $this->load->view('templates/header');
-        $this->load->view('petugas/profil');
-        $this->load->view('templates/footer');
-    }
+
 
 
 

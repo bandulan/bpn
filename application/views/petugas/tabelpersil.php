@@ -10,12 +10,21 @@ $r       = mysqli_query($conn, "SELECT * FROM warga");    //pilih tabel */
 
 
 <!-- Main content -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Data Persil
+                </h1>
+            </div>
 
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
 <section class="content">
 
 
-    <!-- Default box -->
-    <h2>Data Persil</h2>
+
 
     <div class="container-fluid">
 
@@ -29,20 +38,21 @@ $r       = mysqli_query($conn, "SELECT * FROM warga");    //pilih tabel */
                 <table id="dataa" class="col-sm-12table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <td>NIB</td>
-                            <td>Alamat</td>
-                            <td>Actions</td>
+                            <th style="text-align: center;">NIB</th>
+                            <th style="text-align: center;">Alamat</th>
+                            <th style="text-align: center;">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($persil as $p) : ?>
                             <tr>
                                 <td><?= $p['nib']; ?></td>
-                                <td><?= $p['alamat']; ?></td>
+                                <td><?= $p['alamat_persil']; ?></td>
                                 <td style="text-align: center;">
-                                    <a href="" class="badge badge-primary" style="align-items: center;"><i class="fa fa-edit"></i>edit</a>
-                                    <a href="" class="badge badge-danger mx-1"><i class="fa fa-trash"></i>hapus</a>
-                                    <a href="" class="badge badge-success"><i class="fa fa-user"></i>detail</a></td>
+                                    <a href="<?= base_url('persil/detail/');  ?><?= $p['id_persil'] ?>" class="btn btn-success btn-sm"><i class="fa fa-user"> </i> &nbsp; Detail</a>
+
+                                </td>
+
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

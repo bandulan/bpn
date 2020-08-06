@@ -95,7 +95,7 @@
             </li>
             <li class="nav-item">
               <a href="<?= base_url(); ?>petugas/persil" class="nav-link">
-                <i class="nav-icon fas fa-tasks"></i>
+                <i class="nav-icon fas fa-map"></i>
                 <p> Daftar Persil
 
                 </p>

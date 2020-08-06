@@ -17,11 +17,12 @@ $r      = mysqli_query($conn, "SELECT * FROM warga");    //pilih tabel
         <div class="row mx-auto">
             <div class="col">
                 <h1>Profile Warga</h1>
-                <a href="javascript:history.back()" class="btn btn-info mt-3"><i class="fa fa-angle-left"></i>&nbsp; Kembali</a>
-
-
+                <a href="<?= base_url('petugas'); ?>" class="btn btn-info mt-3"><i class="fa fa-angle-left"></i>&nbsp; Kembali</a>
             </div>
-        </div><!-- /.container-fluid -->
+
+
+        </div>
+    </div><!-- /.container-fluid -->
 </section>
 <section class="content">
 
@@ -40,14 +41,14 @@ $r      = mysqli_query($conn, "SELECT * FROM warga");    //pilih tabel
             <div class="col-lg-3">
                 <div class="card card-primary card-outline">
                     <div class="card-header">
-                        <h4 style="text-align: center;">Profil Warga</h4>
+                        <h4 style="text-align: center;">Profile</h4>
                     </div>
                     <div class="card-body box-profile">
                         <div class="text-center">
                             <img class="profile-user-img img-fluid img-circle" src="https://via.placeholder.com/300" alt="User profile picture">
                         </div>
 
-                        <h3 class="profile-username text-center"><?= $warga['nama']; ?></h3>
+                        <!-- <h3 class="profile-username text-center"><?= $warga['nama']; ?></h3>
 
 
 
@@ -64,7 +65,7 @@ $r      = mysqli_query($conn, "SELECT * FROM warga");    //pilih tabel
                                 <b>Alamat</b> <a class="float-right"><?= $warga['alamat']; ?></a>
                             </li>
 
-                        </ul>
+                        </ul> -->
 
 
                     </div>
@@ -84,28 +85,29 @@ $r      = mysqli_query($conn, "SELECT * FROM warga");    //pilih tabel
                                 <th style="text-align: center;">Action</th>
                             </tr>
                         </thead>
-                        <?php
-                        $id = $warga['id_warga'];
+                        <!--  <?php
+                                /* $id = $warga['id_warga'];
                         $sql = mysqli_query($conn, "SELECT * FROM `persil` WHERE `id_pemilik`='$id'");
+ */
 
-
-                        ?>
+                                ?> -->
                         <tbody>
-                            <?php foreach ($sql as $s) : ?>
+                            <!--   <?php foreach ($sql as $s) : ?> -->
 
-                                <tr>
-                                    <td><?= $s['nib']; ?></td>
-                                    <td><?= $s['alamat_persil']; ?></td>
-                                    <td style="text-align: center;">
+                            <tr>
+                                <td>asd</td>
+                                <td>asd</td>
+                                <td style="text-align: center;">
 
-                                        <a href="<?= base_url('persil/detail/');  ?><?= $s['id_persil'] ?>" class="btn btn-success btn-sm"><i class="fa fa-user"> </i> &nbsp; Detail</a>
+                                    <a href="<?= base_url('petugas/detail/');  ?><?= $s['id_persil'] ?>" class="btn btn-success btn-sm"><i class="fa fa-user"> </i> &nbsp; Detail</a>
+                                    <a href="<?= base_url('petugas/detail/');  ?><?= $s['id_persil'] ?>" class="btn btn-warning btn-sm"><i class="fa fa-pen"> </i> &nbsp; Edit</a>
+                                    <a href="<?= base_url('petugas/detail/');  ?><?= $s['id_persil'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"> </i> &nbsp; Delete</a></td>
+                            </tr>
 
-                                </tr>
 
 
 
-
-                            <?php endforeach; ?>
+                            <!-- <?php endforeach; ?> -->
                         </tbody>
                     </table>
                     </>

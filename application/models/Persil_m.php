@@ -27,4 +27,9 @@ class Persil_m extends CI_model
 
         $this->db->insert('persil', $data); //insert to tabel persil
     }
+
+    public function getById($id_persil)
+    {
+        return $this->db->get_where('persil', ['id_persil' => $id_persil])->row_array(); //select dari tabel warga
+    }
 }

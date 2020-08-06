@@ -22,6 +22,18 @@ class Persil extends CI_Controller
         $this->load->view('templates/footer');
     }
 
+    public function detail($id_persil)
+    {
+        $data['persil'] = $this->Persil_m->getById($id_persil);
+
+        $this->load->view('templates/header');
+        $this->load->view('persil/persil', $data);
+        $this->load->view('templates/footer');
+    }
+
+
+
+
     /* public function tambah()                                        //function tambah
     {
         //$data["judul"] = "Form tambah";                             //judul halaman tambah

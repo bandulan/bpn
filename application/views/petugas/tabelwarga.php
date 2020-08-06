@@ -40,12 +40,13 @@ $r      = mysqli_fetch_assoc($result);
             <div class="col-lg-11  table-responsive mx-auto">
 
 
+
                 <table id="dataa" class="col-sm-12 table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <td>KTP</td>
-                            <td>Nama</td>
-                            <td>Actions</td>
+                            <th style="text-align: center;">KTP</th>
+                            <th style="text-align: center;">Nama</th>
+                            <th style="text-align: center;">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -56,8 +57,7 @@ $r      = mysqli_fetch_assoc($result);
                                 <td style="text-align: center;">
 
                                     <a href="<?= base_url('petugas/detail/');  ?><?= $w['id_warga'] ?>" class="btn btn-success btn-sm"><i class="fa fa-user"> </i> &nbsp; Detail</a>
-                                    <a href="<?= base_url('petugas/detail/');  ?><?= $w['id_warga'] ?>" class="btn btn-warning btn-sm"><i class="fa fa-pen"> </i> &nbsp; Edit</a>
-                                    <a href="<?= base_url('petugas/detail/');  ?><?= $w['id_warga'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"> </i> &nbsp; Delete</a></td>
+
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
